@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package gatespb;
+import "gatespb/messages.proto";
+
+service GatesService{
+  rpc Files(FilesRequest) returns (FilesResponse){}
+  rpc FromBucket(FromBucketRequest) returns (FromBucketResponse){}
+  rpc Transcode(TranscodeRequest) returns (TranscodeResponse){}
+}
+
+message FilesRequest {
+  string id = 1;
+}
+
+message FilesResponse {
+  string result = 1;
+}
+
+message FromBucketRequest {
+  TranscodeBodyBucket transcode_body_bucket = 1;
+}
+message FromBucketResponse {
+  string result = 1;
+}
+
+message TranscodeRequest {
+  TranscodeBody transcode_body = 1;
+}
+message TranscodeResponse {
+  string result = 1;
+}

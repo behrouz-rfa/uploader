@@ -1,0 +1,27 @@
+openapiOptions:
+  file:
+    - file: "gatespb/messages.proto"
+      option:
+        info:
+          title: Gates Management
+          version: "1.0.0"
+        basePath: /
+  method:
+    - method: gatespb.GatesService.Files
+      option:
+        operationId: Files
+        tags:
+          - Gate
+        summary: Create a new store
+    - method: gatespb.GatesService.FromBucket
+      option:
+        operationId: getStores
+        tags:
+          - Store
+        summary: Get a list of stores
+    - method: gatespb.GatesService.Transcode
+      option:
+        operationId: getStore
+        tags:
+          - Store
+        summary: Get a store

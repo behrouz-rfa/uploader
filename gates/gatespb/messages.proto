@@ -1,0 +1,38 @@
+syntax = "proto3";
+package gatespb;
+
+
+message MediaMetaData {
+  int32 video = 1;
+  int32 audio = 2;
+  string videoCodec = 3;
+  string vudioCodec = 4;
+  int32 channels = 5;
+  float time = 6;
+  int32 width = 7;
+  int32 height = 8;
+  string rate = 9;
+  string pixfmt = 10;
+  int64 data = 11;
+}
+
+message TranscodeFileMetaData  {
+  int64 id = 1;
+  MediaMetaData media_meta_data = 2;
+  string transcoded_file_id = 3;
+}
+message FileProgress  {
+  int64 id = 1;
+}
+
+message TranscodeBodyBucket  {
+  string id = 1;
+  string bucket = 2;
+  string object_name = 3;
+  string callback_url = 4;
+}
+message TranscodeBody  {
+  string id = 1;
+  string url = 2;
+  string callback_url = 4;
+}

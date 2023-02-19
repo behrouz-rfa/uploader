@@ -1,0 +1,16 @@
+include .env
+export
+.PHONY: openapi
+openapi: openapi_http openapi_js
+
+.PHONY: openapi_http
+openapi_http:
+	scripts/openapi-http.sh uploader internal/uploader/ports ports
+	scripts/openapi-http.sh process internal/process/ports ports
+
+
+.PHONY: openapi_js
+openapi_js:
+	scripts/openapi-js.sh uploader
+	scripts/openapi-js.sh process
+

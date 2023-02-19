@@ -1,0 +1,12 @@
+type: google.api.Service
+config_version: 3
+http:
+  rules:
+    - selector: gatespb.GatesService.Files
+      get: /api/gates/{id}
+    - selector: gatespb.GatesService.FromBucket
+      post: /api/gates
+      body: "*"
+    - selector: gatespb.GatesService.Transcode
+      post: /api/gates/Transcode
+      body: "*"
