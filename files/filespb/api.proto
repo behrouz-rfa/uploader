@@ -1,7 +1,9 @@
 syntax = "proto3";
-
-package filespb;
+import "google/api/httpbody.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
 import "filespb/messages.proto";
+package filespb;
 
 service FilesService{
   rpc Upload(UploadRequest) returns (UploadResponse){}
@@ -9,7 +11,8 @@ service FilesService{
 }
 
 message UploadRequest {
-  string id = 1;
+  google.api.HttpBody http_body = 2;
+
 }
 
 message UploadResponse {

@@ -37,11 +37,12 @@
         },
         "parameters": [
           {
-            "name": "body",
+            "name": "file",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/filespbUploadRequest"
+              "type": "string",
+              "format": "byte"
             }
           }
         ],
@@ -52,14 +53,6 @@
     }
   },
   "definitions": {
-    "filespbUploadRequest": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        }
-      }
-    },
     "filespbUploadResponse": {
       "type": "object",
       "properties": {

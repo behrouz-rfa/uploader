@@ -4,4 +4,4 @@ http:
   rules:
     - selector: filespb.FilesService.Upload
       post: /api/files
-      body: "*"
+      body: "file"
