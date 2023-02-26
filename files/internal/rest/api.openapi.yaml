@@ -1,0 +1,15 @@
+openapiOptions:
+  file:
+    - file: "filespb/messages.proto"
+      option:
+        info:
+          title: Gates Management
+          version: "1.0.0"
+        basePath: /
+  method:
+    - method: filespb.FilesService.Upload
+      option:
+        operationId: Files
+        tags:
+          - Files
+        summary: Upload file

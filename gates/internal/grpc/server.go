@@ -22,11 +22,10 @@ func (s server) FromBucket(ctx context.Context, request *gatespb.FromBucketReque
 }
 
 func (s server) Transcode(ctx context.Context, request *gatespb.TranscodeRequest) (*gatespb.TranscodeResponse, error) {
-	//TODO implement me
-	panic("implement me")
-}
-
-func (s server) mustEmbedUnimplementedGatesServiceServer() {
-	//TODO implement me
+	//body := application.TranscodeBody{
+	//	ID:          request.TranscodeBody.Id,
+	//	URL:         request.TranscodeBody.Url,
+	//	CallbackURL: request.TranscodeBody.CallbackUrl,
+	//}
 	panic("implement me")
 }

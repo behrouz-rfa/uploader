@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package filespb;
+import "filespb/messages.proto";
+
+service FilesService{
+  rpc Upload(UploadRequest) returns (UploadResponse){}
+
+}
+
+message UploadRequest {
+  string id = 1;
+}
+
+message UploadResponse {
+  string result = 1;
+}
+

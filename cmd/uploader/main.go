@@ -10,7 +10,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"net/http"
-	"uploader/gates"
+	"uploader/files"
 	"uploader/internal/config"
 	"uploader/internal/logger"
 	"uploader/internal/monolith"
@@ -66,7 +66,7 @@ func run() (err error) {
 
 	// init modules
 	m.modules = []monolith.Module{
-		&gates.Module{},
+		&files.Module{},
 	}
 	if err := m.startupModules(); err != nil {
 		return err
